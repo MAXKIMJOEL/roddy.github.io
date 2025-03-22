@@ -9,9 +9,15 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <ul class="menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li class="submenu">
+                    <a href="#about">About</a>
+                    <ul class="dropdown">
+                        <li><a href="#biography">Biography</a></li>
+                        <li><a href="#awards">Awards</a></li>
+                    </ul>
+                </li>
                 <li><a href="#music">Music</a></li>
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#media">Media</a></li>
@@ -20,44 +26,10 @@
         </nav>
     </header>
     <main>
-        <section id="home">
-            <div class="hero">
-                <video autoplay loop muted>
-                    <source src="background-video.mp4" type="video/mp4">
-                </video>
-                <div class="hero-text">
-                    <h1>Welcome to [Artist's Name] Official Website</h1>
-                    <p>Stay tuned for the latest music and tour updates!</p>
-                </div>
-            </div>
-        </section>
-        <section id="music" class="card-section">
-            <h2>Music</h2>
-            <div class="card">
-                <img src="album1.jpg" alt="Album 1">
-                <div class="card-content">
-                    <h3>Album 1</h3>
-                    <p>Description of Album 1.</p>
-                    <audio controls>
-                        <source src="album1-track1.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-            </div>
-            <div class="card">
-                <img src="album2.jpg" alt="Album 2">
-                <div class="card-content">
-                    <h3>Album 2</h3>
-                    <p>Description of Album 2.</p>
-                    <audio controls>
-                        <source src="album2-track1.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-            </div>
-        </section>
-        <section id="media">
-            <h2>Media</h2>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to [Artist's Name] Official Website</h1>
+                <p>Stay tuned for the latest music and tour updates!</p>
             </div>
         </section>
         <!-- Add more sections as needed -->

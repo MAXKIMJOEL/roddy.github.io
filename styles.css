@@ -10,6 +10,10 @@ header {
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -22,17 +26,25 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d46c4e;
 }
 
 .hero {
     position: relative;
     text-align: center;
     color: white;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.hero img {
+.hero video {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     opacity: 0.7;
 }
 
@@ -41,6 +53,9 @@ nav ul li a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .card-section {
@@ -49,6 +64,7 @@ nav ul li a {
     gap: 20px;
     justify-content: center;
     padding: 20px;
+    margin-top: 80px;
 }
 
 .card {
@@ -57,6 +73,11 @@ nav ul li a {
     overflow: hidden;
     width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card img {
@@ -68,12 +89,29 @@ nav ul li a {
     padding: 15px;
 }
 
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
 }
